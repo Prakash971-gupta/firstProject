@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>E-Commerce Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Menu -->
+    <header>
+        <h1 class="logo">ShopLite</h1>
+        <nav>
+            <ul>
+                <li onclick="showPage('home')">Home</li>
+                <li onclick="showPage('products')">Products</li>
+                <li onclick="showPage('auth')">Login/Register</li>
+                <li onclick="showPage('contact')">Contact Us</li>
+                <li onclick="showPage('about')">About Us</li>
+                <li onclick="showPage('dashboard')">Dashboard</li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Page -->
+    <section id="home" class="page visible">
+        <h2>Welcome to ShopLite</h2>
+        <p>Your simple demo E-Commerce portal.</p>
+    </section>
+
+    <!-- Products Page -->
+    <section id="products" class="page">
+        <h2>Product Items</h2>
+        <div class="product-grid">
+            <div class="product">
+                <h3>Smartphone</h3>
+                <p>₹25,000</p>
+                <button onclick="addOrder('Smartphone')">Order</button>
+                <button onclick="addWishlist('Smartphone')">Wishlist</button>
+            </div>
+            <div class="product">
+                <h3>Headphones</h3>
+                <p>₹2,000</p>
+                <button onclick="addOrder('Headphones')">Order</button>
+                <button onclick="addWishlist('Headphones')">Wishlist</button>
+            </div>
+            <div class="product">
+                <h3>Shoes</h3>
+                <p>₹1,500</p>
+                <button onclick="addOrder('Shoes')">Order</button>
+                <button onclick="addWishlist('Shoes')">Wishlist</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login & Registration -->
+    <section id="auth" class="page">
+        <h2>User Login / Registration</h2>
+
+        <div class="form-box">
+            <h3>Register</h3>
+            <input type="text" id="regName" placeholder="Full Name">
+            <input type="email" id="regEmail" placeholder="Email">
+            <input type="password" id="regPass" placeholder="Password">
+            <button onclick="register()">Register</button>
+            <p id="regMsg"></p>
+        </div>
+
+        <div class="form-box">
+            <h3>Login</h3>
+            <input type="email" id="logEmail" placeholder="Email">
+            <input type="password" id="logPass" placeholder="Password">
+            <button onclick="login()">Login</button>
+            <p id="logMsg"></p>
+        </div>
+    </section>
+
+    <!-- Dashboard -->
+    <section id="dashboard" class="page">
+        <h2>User Dashboard</h2>
+        <h3>Orders</h3>
+        <ul id="orderList"></ul>
+
+        <h3>Wishlist</h3>
+        <ul id="wishlist"></ul>
+
+        <h3>Comments & Reviews</h3>
+        <textarea id="reviewText" placeholder="Write a review..."></textarea>
+        <button onclick="addReview()">Submit</button>
+        <ul id="reviewList"></ul>
+    </section>
+
+    <!-- Contact Us -->
+    <section id="contact" class="page">
+        <h2>Contact Customer Care</h2>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea placeholder="Message"></textarea>
+        <button>Send</button>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="page">
+        <h2>About Us</h2>
+        <p>This is a simple e-commerce website created using HTML, CSS, and JavaScript.</p>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
